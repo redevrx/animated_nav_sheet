@@ -30,10 +30,7 @@ _navController.reverse();
 ```
 
 ## Preview
-<img src="https://github.com/redevrx/chat_gpt_sdk/blob/main/assets/example/Screenshot_1684672351.png?raw=true" width="350" height="760">
-<img src="https://github.com/redevrx/chat_gpt_sdk/blob/main/assets/example/Screenshot_1684672512.png?raw=true" width="350" height="760">
-<img src="https://github.com/redevrx/chat_gpt_sdk/blob/main/assets/example/Screenshot_1684672715.png?raw=true" width="350" height="760">
-
+![](https://github.com/redevrx/animated_nav_sheet/blob/main/assets/example_preview.gif?raw=true)
 
 
 ## Usage
