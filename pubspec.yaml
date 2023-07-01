@@ -1,7 +1,8 @@
 name: animated_nav_sheet
-description: A new Flutter package project.
+description: Flutter App Create Navigation Nav Animation with Bottom Sheet Very Easy
 version: 1.0.0
-homepage:
+homepage: https://www.facebook.com/profile.php?id=100094077041664
+repository: https://github.com/redevrx/animated_nav_sheet
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
