@@ -20,29 +20,39 @@ class AnimationNavSheet extends StatefulWidget {
 
   ///max height bottom sheet [maxHeight]
   final double maxHeight;
+
   ///min height for navigation bar [minHeight]
   final double minHeight;
+
   ///child [child]
   final Widget child;
+
   ///navigation bar item [navWidget]
   final Widget navWidget;
+
   ///expended child or bottom sheet child [expendedWidget]
   final Widget expendedWidget;
+
   ///margin bottom of navigation bar
   ///default value 40.0 [bool]
   final double bottom;
+
   ///nav sheet color [color]
   final Color color;
+
   ///nav sheet radius [radius]
   ///default value 20.0
   final double radius;
+
   ///nav sheet controller
   ///using play animation
   ///[navController]
   final NavController navController;
+
   ///sheet padding [padding]
   ///default value 16.0
   final EdgeInsetsGeometry? padding;
+
   ///animation duration
   ///default duration 700
   final Duration? duration;
@@ -87,8 +97,10 @@ class _AnimationNavSheetState extends State<AnimationNavSheet>
   void dispose() {
     ///close animation controller
     _controller.dispose();
+
     ///close nav controller
     widget.navController.dispose();
+
     ///close stream subscription
     _streamSubscription?.cancel();
     super.dispose();
