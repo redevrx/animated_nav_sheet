@@ -18,16 +18,33 @@ class AnimationNavSheet extends StatefulWidget {
       this.padding = const EdgeInsets.all(16.0),
       this.duration = const Duration(milliseconds: 700)});
 
+  ///max height bottom sheet [maxHeight]
   final double maxHeight;
+  ///min height for navigation bar [minHeight]
   final double minHeight;
+  ///child [child]
   final Widget child;
+  ///navigation bar item [navWidget]
   final Widget navWidget;
+  ///expended child or bottom sheet child [expendedWidget]
   final Widget expendedWidget;
+  ///margin bottom of navigation bar
+  ///default value 40.0 [bool]
   final double bottom;
+  ///nav sheet color [color]
   final Color color;
+  ///nav sheet radius [radius]
+  ///default value 20.0
   final double radius;
+  ///nav sheet controller
+  ///using play animation
+  ///[navController]
   final NavController navController;
+  ///sheet padding [padding]
+  ///default value 16.0
   final EdgeInsetsGeometry? padding;
+  ///animation duration
+  ///default duration 700
   final Duration? duration;
 
   @override
@@ -47,12 +64,20 @@ class _AnimationNavSheetState extends State<AnimationNavSheet>
 
   @override
   void initState() {
+    ///default current is min height
+    ///using for navigation bar height
     _currentHeight = widget.minHeight;
+
+    ///create animation controller
     _controller = AnimationController(vsync: this, duration: widget.duration);
+
+    ///add animation controller to nav controller
     widget.navController.setAnimationController(_controller);
 
     ///update current height
+    ///when using nav controller show sheet from navigation bar
     _streamSubscription = widget.navController.updateHeight.listen((_) {
+      ///update height
       _currentHeight = widget.maxHeight;
     });
     super.initState();
@@ -60,8 +85,11 @@ class _AnimationNavSheetState extends State<AnimationNavSheet>
 
   @override
   void dispose() {
+    ///close animation controller
     _controller.dispose();
+    ///close nav controller
     widget.navController.dispose();
+    ///close stream subscription
     _streamSubscription?.cancel();
     super.dispose();
   }
@@ -71,6 +99,7 @@ class _AnimationNavSheetState extends State<AnimationNavSheet>
     Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
+        ///content
         widget.child,
         StreamBuilder(
           initialData: false,

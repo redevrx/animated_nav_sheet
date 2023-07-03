@@ -13,7 +13,7 @@ and the Flutter guide for
 
 ## Install Package
 ```
-animated_nav_sheet: 1.0.0
+animated_nav_sheet: 1.1.0
 ```
 
 ## Animation
